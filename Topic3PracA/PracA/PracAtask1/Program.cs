@@ -37,12 +37,12 @@ public static class Program
         TryAction("new CheckingAccount fee -1",
                   () => new CheckingAccount("Johnny", 100m, -1m));
         
-        // // Task2
-        // foreach (var account in accounts)
-        // {
-        //     account.DisplayAccountInfo();
-        //     Console.WriteLine();
-        // }
+        // Task2
+        foreach (var account in accounts)
+        {
+            account.DisplayAccountInfo();
+            Console.WriteLine();
+        }
     }
     
     private static void TryAction(string label, Action action)

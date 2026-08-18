@@ -42,10 +42,10 @@ public class CheckingAccount : BankAccount
         $"{Owner} - Checking: {Balance:C} ({TransactionFee:C} per withdrawal)";
     
     
-    // //Task2
-    // public override void DisplayAccountInfo()
-    // {
-    //     base.DisplayAccountInfo();
-    //     Console.WriteLine($"Transaction fee: ${TransactionFee:0.00}");
-    // }
+    //Task2
+    public override void DisplayAccountInfo()
+    {
+        base.DisplayAccountInfo();
+        Console.WriteLine($"Transaction fee: ${TransactionFee:0.00}");
+    }
 }

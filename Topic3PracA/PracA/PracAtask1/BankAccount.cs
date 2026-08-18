@@ -53,12 +53,12 @@ public class BankAccount
 
     public override string ToString() => $"{Owner} - Basic: {Balance:C}";
     
-    // //Task 2
-    // public virtual void DisplayAccountInfo()
-    // {
-    //     Console.WriteLine("=== Account Information ===");
-    //     Console.WriteLine($"  Type:    {GetType().Name}");
-    //     Console.WriteLine($"  Owner:   {Owner}");
-    //     Console.WriteLine($"  Balance: {Balance:C}");
-    // }
+    //Task 2
+    public virtual void DisplayAccountInfo()
+    {
+        Console.WriteLine("=== Account Information ===");
+        Console.WriteLine($"  Type:    {GetType().Name}");
+        Console.WriteLine($"  Owner:   {Owner}");
+        Console.WriteLine($"  Balance: {Balance:C}");
+    }
 }

@@ -40,12 +40,12 @@ public class SavingsAccount : BankAccount
     public override string ToString() =>
         $"{Owner} - Savings: {Balance:C} at {InterestRate:P2}";
     
-    // //Task 2
-    // public override void DisplayAccountInfo()
-    // {
-    //     base.DisplayAccountInfo();
-    //
-    //     Console.WriteLine($"  Interest rate:     {InterestRate:P2}");
-    //     Console.WriteLine($"  Projected interest: {decimal.Round(Balance * InterestRate, 2, MidpointRounding.AwayFromZero):C}");
-    // }
+    //Task 2
+    public override void DisplayAccountInfo()
+    {
+        base.DisplayAccountInfo();
+    
+        Console.WriteLine($"  Interest rate:     {InterestRate:P2}");
+        Console.WriteLine($"  Projected interest: {decimal.Round(Balance * InterestRate, 2, MidpointRounding.AwayFromZero):C}");
+    }
 }
