@@ -1,5 +1,3 @@
-using System;
-
 namespace Task
 {
     public class FullTimeEmployee : Employee, IReportable
