@@ -12,7 +12,6 @@ namespace Task
                 new FullTimeEmployee("Big Chungus", 85_000m),
                 new Contractor("Donald Trump", 95m, 120m)
             };
-ask 
             foreach (Employee employee in staff)
             {
                 Console.WriteLine($"{employee.Name} takes home {employee.CalculatePay():C}");
