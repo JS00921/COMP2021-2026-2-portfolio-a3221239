@@ -1,0 +1,20 @@
+1. What does polymorphism allow us to do that inheritance alone does not?
+
+    What polymorphism adds beyond inheritance. Inheritance gives shared state (Name, TaxRate) 
+    and a common type, so both subclasses fit in one List<Employee>. But if dispatch followed 
+    the declared type, my loop would need if (e is Contractor c)... on every element. 
+    Polymorphism moves the decision to run time: the CLR picks the override from the actual 
+    object, so adding a PartTimeEmployee needs no change to Program.cs. 
+    IReportable shows polymorphism doesn't even require inheritance — a future Invoice could 
+    be reportable without being an employee.
+
+2. How is this similar or different from Python (or C++)’s behaviour?
+
+    Versus C++ and Python. C++ is closest: non-virtual by default, vtable dispatch. But C# 
+    forces the override keyword (C++ makes it optional, so a mistyped signature silently 
+    becomes a new overload), and a C++ vector<Employee> stores by value and slices derived 
+    objects — C# holds references, so runtime type always survives. Python needs no 
+    declarations at all: every method is dynamically looked up, and duck typing means no 
+    shared base class is required. abc.ABC recovers enforcement, but at instantiation 
+    rather than compile time. The trade-off is where errors surface — C# won't compile a 
+    subclass that skips CalculatePay(); Python finds out when it's called.
